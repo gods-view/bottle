@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.top-black {
+    width: 100%;
+    height: 35px;
+    background: black;
+}
+
+.top-black .inner-left {
+    float: left;
+    margin-left: 80px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.top-black .inner-right {
+    float: right;
+    margin-right:80px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.top-black ul, .top-black li {
+    display: inline-block;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.category {
+    width: 100%;
+    height: 90px;
+}
+.category .web-icon {
+    float: left;
+    margin-left: 75px;
+}
+.category .types {
+    float: right;
+    margin-right: 100px;
+    line-height: 90px;
+}
+.category .type-select {
+    width: 180px;
+    height: 30px;
+    margin-right: 80px;
+    line-height: 90px;
+    background: grey;
+    border: none;
+    color: white;
+}
+
+.swiper-container {
+    width: 100%; height: 100%;
+    /*width: 500px;*/ /*height: 500px;*/
+}
+.swiper-slide { text-align: center;
+    font-size: 18px; background: #fff;
+    display: -webkit-box; display: -ms-flexbox;
+    display: -webkit-flex; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center;
+    -webkit-justify-content: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center;
+    -webkit-align-items: center; align-items: center;
+}
+
+.description {
+    width: 100%;
+    height: 250px;
+    margin: 50px auto;
+}
+
+.description .p1{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.description .p2 {
+    text-align: center;
+    margin: 10px 15%;
+}
+.description .p3 {
+    text-align: center;
+    margin: 25px 15%;
+}
+
+.sample-show {
+    width: 100%;
+    text-align: center;
+}
+.sample-show .show1 {
+    display: inline-block;
+    width: 24%;
+    border: none;
+}
+.sample-show .show1 span {
+    font-size: 12px;
+}
+.sample-show .show1 .showimg{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+}
+.sample-show .show1 img{
+    width: 100%;
+    height: 100%;
+}
+.sample-show .show1 .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.sample-show .read-more {
+    margin-top: 15px;
+    width: 40%;
+    height: 30px;
+    background: #6680c6;
+    color: white;
+}
+
+.contact-us {
+    margin-top: 60px;
+    width: 100%;
+    height: 300px;
+}
+
+.form-sub {
+    width: 100%;
+    margin: 0 auto;
+}
+.form-sub form {
+    width: 500px;
+    display: block;
+}
+.form-sub label {
+    width: 50px;
+    text-align: center;
+}
+.form-sub form div {
+    height: 30px;
+    line-height: 30px;
+}
+.form-sub input {
+    width: 300px;
+}
+.form-sub .send {
+    width: 100px;
+    height: 30px;
+    background: green;
+    color: white;
+}
