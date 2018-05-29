@@ -2,7 +2,6 @@ from django.contrib import admin
 from goods.models import Products
 from django.utils.safestring import mark_safe
 from django.db import models
-from form_utils.widgets import ImageWidget
 from django.utils.safestring import mark_safe
 
 
