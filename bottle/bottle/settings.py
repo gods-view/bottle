@@ -73,26 +73,26 @@ WSGI_APPLICATION = 'bottle.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'test',
-#         'USER': 'root',
-#         'PASSWORD': 'skk619',
-#         'HOST': 'localhost',
-#         'PORT': 3306,
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bottle',
+        'NAME': 'test',
         'USER': 'root',
-        'PASSWORD': 'wlbottle2018!',
+        'PASSWORD': 'skk619',
         'HOST': 'localhost',
         'PORT': 3306,
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'bottle',
+#         'USER': 'root',
+#         'PASSWORD': 'wlbottle2018!',
+#         'HOST': 'localhost',
+#         'PORT': 3306,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT='/var/www/bottle/static/'
+STATIC_ROOT = '/var/www/bottle/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/img/'
