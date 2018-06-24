@@ -7,7 +7,7 @@
     <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static 'css/swiper-4.2.6.min.css' %}" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="{% static 'js/swiper-4.2.6.min.js' %}"></script>
-    <!--<script type="text/javascript" src="../js/home.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 </head>
 <body>
 <div class="top-black">
@@ -72,7 +72,7 @@
                 <div class="title">{{ item.category }}</div>
                 <div>{{ item.subhead }}</div>
             </div>
-            <button class="read-more">read more</button>
+            <button class="read-more" data-type="{{ item.category }}">read more</button>
         </div>
     {% endfor %}
 
@@ -101,6 +101,17 @@
             <button class="send">send</button>
         </form>
     </div>
+</div>
 </body>
-<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/home.js' %}">
+</script>
+<script>
+    var selectOption = Array.from($('.read-more'))
+    selectOption.forEach(function (v, k) {
+        v.onclick = function () {
+            var category = $(this).attr("data-type")
+            window.location.href = "/goods/type/" + category
+        }
+    })
+</script>
 </html>
