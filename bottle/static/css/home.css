@@ -36,8 +36,16 @@ body {
     height: 90px;
 }
 .category .web-icon {
+    display: inline-block;
     float: left;
     margin-left: 75px;
+    margin-top: 10px;
+    width: 60px;
+    height: 70px;
+}
+.category .web-icon img{
+    width: 100%;
+    height: 100%;
 }
 .category .types {
     float: right;
