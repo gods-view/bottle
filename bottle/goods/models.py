@@ -21,7 +21,7 @@ class Products(BaseModel):
     title = models.CharField(max_length=50, verbose_name="标题")
     subhead = models.CharField(max_length=100, verbose_name="副标题")
     description = models.TextField(verbose_name="描述")
-    image = models.ImageField(u'图片', upload_to='img/goods', null=True)
+    image = models.ImageField(u'图片', upload_to='goods', null=True)
     Content = UEditorField(u'内容', width=600, height=300, toolbars="full", imagePath="img/goods", filePath="",
                            upload_settings={"imageMaxSize": 1204000},
                            settings={}, command=None, event_handler=None, blank=True)
