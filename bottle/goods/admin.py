@@ -25,8 +25,6 @@ class ProductAdmin(admin.ModelAdmin):
     # list_per_page设置每页显示多少条记录，默认是100条
     list_per_page = 30
 
-    # ordering设置默认排序字段，负号表示降序排序
-    ordering = ('-update_time',)
 
     # list_editable 设置默认可编辑字段
     # list_editable = ['machine_room_id', 'temperature']
@@ -34,7 +32,6 @@ class ProductAdmin(admin.ModelAdmin):
     # 筛选器
     list_filter = ('category',)  # 过滤器
     search_fields = ('category',)  # 搜索字段
-    date_hierarchy = 'create_time'  # 详细时间分层筛选
 
 
 admin.site.register(Products, ProductAdmin)

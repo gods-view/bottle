@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.main),
     path(r'ueditor/', include('DjangoUeditor.urls')),
     path(r'goods/', include('goods.urls')),
+    path(r'static/', views.main)
 ]

@@ -17,7 +17,7 @@ class ProductsManager(BaseManager):
 
 # Create your models here.
 class Products(BaseModel):
-    category = models.CharField(max_length=20, verbose_name="产品类别")
+    category = models.CharField(max_length=50, verbose_name="产品类别")
     title = models.CharField(max_length=50, verbose_name="标题")
     subhead = models.CharField(max_length=100, verbose_name="副标题")
     description = models.TextField(verbose_name="描述")
@@ -26,6 +26,8 @@ class Products(BaseModel):
                            upload_settings={"imageMaxSize": 1204000},
                            settings={}, command=None, event_handler=None, blank=True)
     imgurl = models.CharField(max_length=100, default="", verbose_name="图片地址")
+    imgurl2 = models.CharField(max_length=500, default="", verbose_name="图片地址2")
+    imgurl3 = models.CharField(max_length=500, default="", verbose_name="图片地址3")
 
     def image_data(self, obj):
         return obj.image.url

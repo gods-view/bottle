@@ -7,21 +7,20 @@ from user.models import Passport
 
 class UserAdmin(admin.ModelAdmin):
     # listdisplay设置要显示在列表中的字段（id字段是Django模型的默认主键
-    list_display = ('username', 'password', 'email', 'create_time')
+    list_display = ('username', 'password', 'email')
 
     # list_per_page设置每页显示多少条记录，默认是100条
     list_per_page = 30
 
-    # ordering设置默认排序字段，负号表示降序排序
-    ordering = ('-create_time',)
+    # # ordering设置默认排序字段，负号表示降序排序
+    # ordering = ('-create_time',)
 
     # list_editable 设置默认可编辑字段
     # list_editable = ['machine_room_id', 'temperature']
 
     # 筛选器
-    list_filter = ('username', 'email', 'create_time')  # 过滤器
-    search_fields = ('username', 'email', 'create_time')  # 搜索字段
-    date_hierarchy = 'create_time'  # 详细时间分层筛选
+    list_filter = ('username', 'email')  # 过滤器
+    search_fields = ('username', 'email')  # 搜索字段
 
 
 class MyAdminSite(admin.AdminSite):
