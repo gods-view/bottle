@@ -48,6 +48,7 @@ p {
 }
 .middle .level1 .left .btn {
     width: 60%;
+    margin-top: 50px;
     margin-left: 20%;
     line-height: 45px;
     text-align: center;
@@ -95,10 +96,10 @@ p {
 .multi-pic .inner .simple-desc {
     text-align: center;
     font-size: 50px;
-    margin: 0 auto 30px auto;
+    margin: 0 -10px 40px -60px;
 }
 .multi-pic .inner img{
-    margin: 0 auto 0 auto;
+    margin: 10px 30px 10px 10px;
     width: 180px;
     height: 180px;
 }

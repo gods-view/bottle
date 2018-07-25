@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load splitstr %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +48,7 @@
 <div class="middle">
     <div class="level1">
         <div class="left">
-            <div class="pic"><img src="{% static 'img/huaguan.jpg' %}"></div>
+            {#            <div class="pic"><img src="{% static 'img/huaguan.jpg' %}"></div>#}
             <div class="txt">
                 {{ products.description }}
             </div>
@@ -56,14 +57,14 @@
                 of registration </a></div>
         </div>
         <div class="right">
-            <div>
-                <img src="{% static 'img/show1.jpg' %}" alt="">
-                <img src="{% static 'img/show2.jpg' %}" alt="">
-            </div>
-            <div>
-                <img src="{% static 'img/show3.jpg' %}" alt="">
-                <img src="{% static 'img/show4.jpg' %}" alt="">
-            </div>
+            {#            <div>#}
+            {#                <img src="{% static 'img/show1.jpg' %}" alt="">#}
+            {#                <img src="{% static 'img/show2.jpg' %}" alt="">#}
+            {#            </div>#}
+            {#            <div>#}
+            {#                <img src="{% static 'img/show3.jpg' %}" alt="">#}
+            {#                <img src="{% static 'img/show4.jpg' %}" alt="">#}
+            {#            </div>#}
         </div>
     </div>
     <div class="level2">
@@ -110,22 +111,9 @@
     <div class="multi-pic">
         <div class="inner">
             <div class="simple-desc">Some examples</div>
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
-            <img src="{% static 'img/show2.jpg' %}" alt="">
+            {% for item in products.imgurl2|splitstr %}
+                <img src="{% static item %}" alt="">
+            {% endfor %}
         </div>
     </div>
 
