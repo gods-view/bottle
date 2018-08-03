@@ -1,6 +1,6 @@
 body {
     font-family: Roboto, sans-serif;
-    background: url("../images/61.2.jpg") no-repeat center;
+    /*background: url("../images/61.2.jpg") no-repeat center;*/
 }
 p {
     margin: 1px 0 3px 0;
@@ -9,12 +9,13 @@ p {
 
 .transparent {
     width: 100%;
-    height: 330px;
+    height: 250px;
+    margin-top: 20px;
     background-color: rgba(0,0,0,0.7);
 }
 .transparent .bbb {
     width:100%;
-    height: 120px;
+    height: 70px;
 }
 .transparent .title {
     text-align: center;
@@ -36,15 +37,17 @@ p {
 }
 .middle .level1 {
     margin-top: 50px;
-    height: 555px;
+    height: 350px;
 }
 .middle .pic {
     text-align: center;
 }
 .middle .level1 .left {
     float: left;
-    width: 30%;
+    width: 70%;
     margin-left: 15%;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .middle .level1 .left .btn {
     width: 60%;
@@ -58,12 +61,12 @@ p {
 .middle .level1 .left .btn a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 40px;
 }
-.middle .level1 .right {
-    float: left;
-    margin-left: 50px;
-}
+/*.middle .level1 .right {*/
+    /*float: left;*/
+    /*margin-left: 50px;*/
+/*}*/
 
 .middle .level2 {
     margin: 50px auto 0 15%;
@@ -116,21 +119,23 @@ p {
     width: 80%;
 }
 .contact-us .inner .big {
-    font-size: 36px;
+    font-size: 26px;
     color: white;
     font-weight: bold;
 }
 .contact-us .inner .small {
-    font-size: 36px;
+    margin-top: 10px;
+    font-size: 16px;
     color: white;
 }
 .contact-us .inner .btn {
     width: 30%;
-    margin-left: 20%;
+    margin-left: 10%;
     line-height: 45px;
     text-align: center;
     height: 45px;
     background: #4a68ad;
+    margin-top: 15px;
 }
 .contact-us .inner .btn a {
     text-decoration: none;

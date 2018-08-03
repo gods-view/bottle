@@ -21,19 +21,19 @@ class Products(BaseModel):
     title = models.CharField(max_length=50, verbose_name="标题")
     subhead = models.CharField(max_length=100, verbose_name="副标题")
     description = models.TextField(verbose_name="描述")
-    image = models.ImageField(u'图片', upload_to='goods', null=True)
-    Content = UEditorField(u'内容', width=600, height=300, toolbars="full", imagePath="img/goods", filePath="",
-                           upload_settings={"imageMaxSize": 1204000},
-                           settings={}, command=None, event_handler=None, blank=True)
+    # image = models.ImageField(u'图片', upload_to='goods', null=True)
+    # Content = UEditorField(u'内容', width=600, height=300, toolbars="full", imagePath="img/goods", filePath="",
+    #                        upload_settings={"imageMaxSize": 1204000},
+    #                        settings={}, command=None, event_handler=None, blank=True)
     imgurl = models.CharField(max_length=100, default="", verbose_name="图片地址")
     imgurl2 = models.CharField(max_length=500, default="", verbose_name="图片地址2")
-    imgurl3 = models.CharField(max_length=500, default="", verbose_name="图片地址3")
+    # imgurl3 = models.CharField(max_length=500, default="", verbose_name="图片地址3")
 
-    def image_data(self, obj):
-        return obj.image.url
+    # def image_data(self, obj):
+    #     return obj.image.url
 
     # 页面显示的字段名称
-    image_data.short_description = u'类别图片'
+    # image_data.short_description = u'类别图片'
 
     objects = ProductsManager()  # 自定义模型管理器类对象
 

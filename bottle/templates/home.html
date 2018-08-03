@@ -19,8 +19,8 @@
     </div>
     <div class="inner-right">
         <ul>
-            <li><a>+86 15000176821</a></li>
-            <li><a>kdgglassware@kayuendeglassware.com</a></li>
+            <li><a>phone: +86 15000176821</a></li>
+            <li><a>email: kdgglassware@kayuendeglassware.com</a></li>
         </ul>
     </div>
 </div>
@@ -42,9 +42,9 @@
 
 <div class="swiper-container"> <!--//固定写法 表示一个容器-->
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="{% static 'img/goods/1.jpg' %}"></div> <!--几个页面写几个div-->
-        <div class="swiper-slide"><img src="{% static 'img/goods/14.3.jpg' %}"></div>
-        <div class="swiper-slide"><img src="{% static 'img/goods/119.jpg' %}"></div>
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img1.jpg' %}"></div> <!--几个页面写几个div-->
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img2.jpg' %}"></div>
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img3.jpg' %}"></div>
     </div> <!--//主体内容--> <!-- 小点-->
     <div class="swiper-pagination"></div> <!-- 左右按钮-->
     <div class="swiper-button-prev"></div> <!--//上一页-->
@@ -75,32 +75,49 @@
             <button class="read-more" data-type="{{ item.category }}">read more</button>
         </div>
     {% endfor %}
-
-
     <div class="contact-us">
-        <img src="{% static 'img/goods/contact_us.jpg' %}">
+        <div class="inner">
+            <div>
+                <div class="big">Contact us for more information</div>
+                <div class="big">We will be happy to help you</div>
+            </div>
+{#            <div class="btn">#}
+{#                <!--<a href="">contact us ></a>-->#}
+{#                <div class="btn"><a href="#">contact us ></a></div>#}
+{#            </div>#}
+            <div>
+                <div class="small">You can send email or calling/Whatsapp/Skype for more details. Email:
+                    kdgglassware@kayuendeglassware.com Phone number: +86 15000176821 Whatsapp: +8615000176821 Skype:
+                    +8615000176821
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-sub">
-        <form>
-            <div>
-                <label>name:</label>
-                <input placeholder="name">
-            </div>
-            <div>
-                <label>email:</label>
-                <input placeholder="email">
-            </div>
-            <div>
-                <label>phone:</label>
-                <input placeholder="phone">
-            </div>
-            <div>
-                <label>message:</label>
-                <input placeholder="message">
-            </div>
-            <button class="send">send</button>
-        </form>
-    </div>
+
+{#    <div class="contact-us">#}
+{#        <img src="{% static 'img/goods/contact_us.jpg' %}">#}
+{#    </div>#}
+{#    <div class="form-sub">#}
+{#        <form>#}
+{#            <div>#}
+{#                <label>name:</label>#}
+{#                <input placeholder="name">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label>email:</label>#}
+{#                <input placeholder="email">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label>phone:</label>#}
+{#                <input placeholder="phone">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label>message:</label>#}
+{#                <input placeholder="message">#}
+{#            </div>#}
+{#            <button class="send">send</button>#}
+{#        </form>#}
+{#    </div>#}
 </div>
 </body>
 <script type="text/javascript" src="{% static 'js/home.js' %}">
