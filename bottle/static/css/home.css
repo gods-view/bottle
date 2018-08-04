@@ -104,6 +104,8 @@ body {
     display: inline-block;
     width: 24%;
     border: none;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .sample-show .show1 span {
     font-size: 12px;
