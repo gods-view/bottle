@@ -7,3 +7,10 @@ def main(request):
     for item in products:
         print(item.category)
     return render(request, "home.html", {"products": products})
+
+
+def mobile(request):
+    products = Products.objects.all()
+    for item in products:
+        print(item.category)
+    return render(request, "mobile.html", {"products": products})

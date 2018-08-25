@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>glassware</title>
+    <link href="{% static 'css/swiper-4.2.6.min.css' %}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{% static 'js/swiper-4.2.6.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+{#    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>#}
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top-black {
+            width: 100%;
+            height: 0.8rem;
+            background: black;
+        }
+
+        .top-black .email {
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+            height: 100%;
+            float: right;
+            /*vertical-align: middle;*/
+            /*text-align: center;*/
+            margin-right: 0.5rem;
+            font-size: 0.24rem;
+            color: #ffffff;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .left > img {
+            margin-left: 1rem;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .right > select {
+            margin-right: 1rem;
+            height: 1rem;
+            width: 3rem;
+            font-size: 0.24rem;
+            border: solid black;
+        }
+
+        .swiper-slide img {
+            margin-left: 5%;
+            width: 90%;
+            height: 4rem;
+            text-align: center;
+        }
+
+        .swiper-container {
+            height: 4.5rem;
+            margin-top: 2.4rem;
+        }
+
+        .description {
+            position: relative;
+            font-size: 0.28rem;
+            height: 2.2rem;
+        }
+
+        .description > h3 {
+            width: 100%;
+            text-align: center;
+        }
+
+        /*.description>div{*/
+        /*position: relative;*/
+        /*top: -0.8rem;*/
+        /*left: 9.5rem;*/
+        /*font-size: 0.6rem;*/
+        /*color: red;*/
+        /*}*/
+        /*.next_p{*/
+        /*position:absolute;top:50%;width:27px;*/
+        /*height:44px;margin-top:-22px;z-index:10;*/
+        /*cursor:pointer;background-size:27px 44px;*/
+        /*background-position:center;background-repeat:no-repeat*/
+        /*}*/
+        .sample-show {
+            margin-top: 0.8rem;
+            height: 6rem;
+            width: 100%;
+            font-size: 0;
+            overflow: scroll;
+        }
+
+        .sample-show > .show {
+            height: 3.5rem;
+            width: 33%;
+            display: inline-block;
+        }
+
+        .show > img {
+            height: 2rem;
+            width: 100%;
+        }
+
+        .show > .sample-desc {
+            height: 0.8rem;
+            font-size: 0.24rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .show > .read-more {
+            height: 0.4rem;
+            text-align: center;
+            font-size: 0.28rem;
+            background: #6680c6;
+            color: white;
+            border-right: solid green;
+            /*overflow: hidden;*/
+        }
+
+        /*.show>.read-more>button{*/
+        /*!*margin-top: -0.6rem;*!*/
+        /*font-size: 0.28rem;*/
+        /*background: #6680c6;*/
+        /*color: white;*/
+        /*}*/
+        .contact-us {
+            width: 100%;
+            height: 2.4rem;
+            background: #5f5d60;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-us .big {
+            font-size: 0.36rem;
+        }
+
+        .contact-us .small {
+            font-size: 0.24rem;
+        }
+    </style>
+</head>
+<body>
+<div class="top-black">
+    <div class="email">Email: kdgglassware@kayuendeglassware.com</div>
+</div>
+<div>
+    <div class="left"><img src="{% static 'img/logo.jpg' %}"></div>
+{#    <div class="right">#}
+{#        <select class="type-select">#}
+{#            <option selected="selected" value="1">about us</option>#}
+{#            <option value="2">glassware</option>#}
+{#            <option value="3">prettech tanks</option>#}
+{#            <option value="4">green energy</option>#}
+{#            <option value="5">contact us</option>#}
+{#        </select></div>#}
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img1.jpg' %}"></div>
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img2.jpg' %}"></div>
+        <div class="swiper-slide"><img src="{% static '/goods2/home/img3.jpg' %}"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<div class="description">
+    <h3>Company Profile</h3>
+    <p data-index="0" class="content">Originated in Anhui, we have more than 15 years experience in wine glass bottle,
+        beverage glass bottle,decoration glass bottle, storage jar, container jar, high borosilicate bottle, medicine
+        using bottle and glass tube for solar energy using etc. Customization is available and welcome for us.</p>
+    <!--<span class="next_p"></span>-->
+    <div id="next" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+</div>
+<div class="sample-show">
+    {% for item in products %}
+{#        <div class="show1">#}
+{#            <div class="showimg">#}
+{#                <img src="{% static item.imgurl %}">#}
+                {#                <span>Glassware</span>#}
+{#            </div>#}
+{#            <div class="sample-desc">#}
+{#                <div class="title">{{ item.category }}</div>#}
+{#                <div>{{ item.subhead }}</div>#}
+{#            </div>#}
+{#            <button class="read-more" data-type="{{ item.category }}">read more</button>#}
+{#        </div>#}
+        <div class="show">
+        <img src="{% static item.imgurl %}" alt={{ item.category }}>
+        <div class="sample-desc">
+            <div class="title">{{ item.category }}</div>
+                <div>{{ item.subhead }}</div>
+        </div>
+        <div class="read-more">read more</div>
+    </div>
+    {% endfor %}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/5.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/6.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/7.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/4.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/3.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/3.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/3.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+{#    <div class="show">#}
+{#        <img src="http://www.kaglassware.top/static/goods2/home/3.jpg" alt="demo img">#}
+{#        <div class="sample-desc">#}
+{#            <div class="title">demo title</div>#}
+{#            <div>prod code</div>#}
+{#        </div>#}
+{#        <div class="read-more">read more</div>#}
+{#    </div>#}
+</div>
+<div class="contact-us">
+    <div class="inner">
+        <div>
+            <div class="big">Contact us for more information</div>
+            <div class="big">We will be happy to help you</div>
+        </div>
+        <div>
+            <div class="small">You can send email or calling/Whatsapp/Skype for more details. Email:
+                kdgglassware@kayuendeglassware.com Phone number: +86 15000176821 Whatsapp: +8615000176821 Skype:
+                +8615000176821
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+{#<script src="./js/jquery-3.2.1.min.js"></script>#}
+{#<script src="./js/swiper-4.2.6.min.js"></script>#}
+<script type="text/javascript">
+    console.warn(document.documentElement.clientWidth);
+    document.documentElement.style.fontSize = window.innerWidth / 10 + 'px';
+    window.onresize = function () {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    };
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: true,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        }
+    });
+    $(document).ready(function () {
+        var desc = ["Originated in Anhui, we have more than 15 years experience in wine glass bottle, beverage glass bottle,decoration glass bottle, storage jar, container jar, high borosilicate bottle, medicine using bottle and glass tube for solar energy using etc. Customization is available and welcome for us.",
+            "With a factory covering 25000 square meters and an office with 100 square meters, our company have 300 staffs in factory and 10 salesmen in office. In order to provide our client high quality product, our company uses the high end machine imported from Germany and the latest automatic production line. We always place high emphasis on training our technicians, our strong R&D design capability, strict QC system and 100% in-time delivery make our clients satisfy and trust us.",
+            "Every year our value of exports reach at $20,000,000, to many countries like Southeast Asia, North America, South America, Australia, Europe, Middle East country etc. Our glassware are using all aspects of life, all over the world. As a sales of Kayuen.DE, we are proud of our glassware. Welcome to cooperate with us."]
+
+        function switch_p() {
+            var index = $(".content").attr("data-index");
+            console.log("index:" + index);
+            if (parseInt(index) == 2) {
+                $(".content").html(desc[0]);
+                $(".content").attr("data-index", "0");
+            } else {
+                $(".content").html(desc[parseInt(index) + 1]);
+                $(".content").attr("data-index", "" + (parseInt(index) + 1));
+            }
+        }
+
+        $("#next").click(function () {
+            switch_p();
+        });
+    })
+</script>
+</html>

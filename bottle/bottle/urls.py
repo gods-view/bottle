@@ -20,6 +20,7 @@ from bottle import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main),
+    path('mobile', views.mobile),
     path(r'ueditor/', include('DjangoUeditor.urls')),
     path(r'goods/', include('goods.urls')),
     path(r'static/', views.main)
