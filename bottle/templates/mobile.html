@@ -204,7 +204,7 @@
             <div class="title">{{ item.category }}</div>
                 <div>{{ item.subhead }}</div>
         </div>
-        <div class="read-more">read more</div>
+        <div class="read-more" data-type="{{ item.category }}">read more</div>
     </div>
     {% endfor %}
 {#    <div class="show">#}
@@ -334,6 +334,13 @@
         $("#next").click(function () {
             switch_p();
         });
+    })
+    var selectOption = Array.from($('.read-more'))
+    selectOption.forEach(function (v, k) {
+        v.onclick = function () {
+            var category = $(this).attr("data-type")
+            window.location.href = "mobile/goods/type/" + category
+        }
     })
 </script>
 </html>

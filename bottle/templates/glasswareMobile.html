@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load splitstr %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>glassware</title>
+    <link href="{% static '/css/glasswareMobile.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top-black">
+    <div class="inner-left">
+        <ul class="national-flag">
+{#            <li><a href="#"><img src="{% static 'img/flag1.gif' %}"></a></li>#}
+{#            <li><a href="#"><img src="{% static 'img/flag2.gif' %}"></a></li>#}
+        </ul>
+    </div>
+    <div class="inner-right">
+        <ul>
+{#            <li><a>phone: +86 15000176821</a></li>#}
+            <li><a>Email: kdgglassware@kayuendeglassware.com</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="category">
+    <div class="web-icon">
+        <img src="{% static 'img/logo.jpg' %}">
+    </div>
+    <div class="types">
+        <select class="type-select">
+            <option selected="selected" value="1">about us</option>
+            <option value="2">glassware</option>
+            <option value="3">prettech tanks</option>
+            <option value="4">green energy</option>
+            <option value="5">contact us</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="transparent">
+    <div class="bbb"></div>
+    <div class="title">{{ products.title }}</div>
+    <div class="simple-desc">{{ products.subhead }}</div>
+</div>
+<div class="middle">
+    <div class="level1">
+        <div class="left">
+            {#            <div class="pic"><img src="{% static 'img/huaguan.jpg' %}"></div>#}
+            <div class="txt">
+                {{ products.description }}
+            </div>
+{#            <div class="btn"><a target="_blank"#}
+{#                                href="https://www.vineblossom.it/images/2018/03/15/mmexport1511895237804.jpg">Certificate#}
+{#                of registration </a></div>#}
+        </div>
+        <div class="right">
+            {#            <div>#}
+            {#                <img src="{% static 'img/show1.jpg' %}" alt="">#}
+            {#                <img src="{% static 'img/show2.jpg' %}" alt="">#}
+            {#            </div>#}
+            {#            <div>#}
+            {#                <img src="{% static 'img/show3.jpg' %}" alt="">#}
+            {#                <img src="{% static 'img/show4.jpg' %}" alt="">#}
+            {#            </div>#}
+        </div>
+    </div>
+    <div class="level2">
+        {#        {{ products.description }}#}
+        {#        <div class="level3">#}
+        {#            <div>#}
+        {#                <p>The company features:</p>#}
+        {#                <ul>#}
+        {#                    <li>Optimal quality, bright and clean material</li>#}
+        {#                    <li>Varieties up to 2800, updating in 3 to 7 days</li>#}
+        {#                    <li>Complete facilities, including bottle cap factory, mold and carton factory</li>#}
+        {#                    <li>Best reputation in glass industry</li>#}
+        {#                </ul>#}
+        {#            </div>#}
+        {#            <div>#}
+        {#                <p>The company features:</p>#}
+        {#                <ul>#}
+        {#                    <li>Optimal quality, bright and clean material</li>#}
+        {#                    <li>Varieties up to 2800, updating in 3 to 7 days</li>#}
+        {#                    <li>Complete facilities, including bottle cap factory, mold and carton factory</li>#}
+        {#                    <li>Best reputation in glass industry</li>#}
+        {#                </ul>#}
+        {#            </div>#}
+        {#            <div>#}
+        {#                <p>The company features:</p>#}
+        {#                <ul>#}
+        {#                    <li>Optimal quality, bright and clean material</li>#}
+        {#                    <li>Varieties up to 2800, updating in 3 to 7 days</li>#}
+        {#                    <li>Complete facilities, including bottle cap factory, mold and carton factory</li>#}
+        {#                    <li>Best reputation in glass industry</li>#}
+        {#                </ul>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class="level4">#}
+        {#            <p>Sample avaliable.</p>#}
+        {#            <p>We will send the bottles to the exact address securely.</p>#}
+        {#        </div>#}
+        {#        <div class="level5">#}
+        {#            <p>With years of export experience, excellent quality, advanced services and competitive prices, Huaguan has#}
+        {#                won the trust and support of numerous customers.</p>#}
+        {#        </div>#}
+    </div>
+
+    <div class="multi-pic">
+        <div class="inner">
+            <div class="simple-desc">Some examples</div>
+            {% for item in products.imgurl2|splitstr %}
+                <img src="{% static item %}" alt="">
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <div class="inner">
+            <div>
+                <div class="big">Contact us for more information</div>
+                <div class="big">We will be happy to help you</div>
+            </div>
+{#            <div class="btn">#}
+{#                <!--<a href="">contact us ></a>-->#}
+{#                <div class="btn"><a href="#">contact us ></a></div>#}
+{#            </div>#}
+            <div>
+                <div class="small">You can send email or calling/Whatsapp/Skype for more details. Email:
+                    kdgglassware@kayuendeglassware.com Phone number: +86 15000176821 Whatsapp: +8615000176821 Skype:
+                    +8615000176821
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
