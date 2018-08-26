@@ -26,7 +26,7 @@ class Products(BaseModel):
     #                        upload_settings={"imageMaxSize": 1204000},
     #                        settings={}, command=None, event_handler=None, blank=True)
     imgurl = models.CharField(max_length=100, default="", verbose_name="图片地址")
-    imgurl2 = models.CharField(max_length=1000, default="", verbose_name="图片地址2")
+    imgurl2 = models.TextField(default="", verbose_name="图片地址2")
     # imgurl3 = models.CharField(max_length=500, default="", verbose_name="图片地址3")
 
     # def image_data(self, obj):
